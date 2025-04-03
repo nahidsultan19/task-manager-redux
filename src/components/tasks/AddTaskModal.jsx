@@ -18,6 +18,7 @@ const AddTaskModal = ({isOpen, setIsOpen}) => {
         onCancel();
         console.log(data)
     }
+
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen} title="Add Tasks">
         <form onSubmit={handleSubmit(onSubmit)}>
