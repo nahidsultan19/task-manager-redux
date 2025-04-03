@@ -1,12 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState ={
-    task:[],
+    tasks:[],
 }
 const tasksSlice = createSlice({
-    name:'taskSlice',
+    name:'tasksSlice',
     initialState,
-    reducer:{},
+    reducers:{
+        addTask:(state, {payload})=>{
+            state.tasks.push(payload);
+        },
+    },
 });
+
+export const {addTask} = tasksSlice.actions;
 
 export default tasksSlice.reducer;
