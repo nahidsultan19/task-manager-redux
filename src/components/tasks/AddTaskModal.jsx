@@ -24,11 +24,11 @@ const AddTaskModal = ({isOpen, setIsOpen}) => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col gap-3">
                 <label htmlFor="title">Title</label>
-                <input className="w-full rounded-md" id="title" type="text" {...register('name')}/>
+                <input className="w-full rounded-md" id="title" type="text" {...register('title')}/>
             </div>
             <div className="flex flex-col gap-3">
                 <label htmlFor="title">Desciption</label>
-                <textarea type="text" id="description" className="w-full rounded-md"></textarea>
+                <textarea type="text" id="description" className="w-full rounded-md" {...register('description')}></textarea>
             </div>
             <div className="flex flex-col gap-5">
                 <label htmlFor="title" className="mb-2">
