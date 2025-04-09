@@ -16,11 +16,10 @@ const AddTaskModal = ({isOpen, setIsOpen}) => {
     const onSubmit = (data) =>{
         dispatch(addTask(data))
         onCancel();
-        console.log(data)
     }
 
   return (
-    <Modal isOpen={isOpen} setIsOpen={setIsOpen} title="Add Tasks">
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen} title="Add Tasks" onClose={() => setIsOpen(false)}>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col gap-3">
                 <label htmlFor="title">Title</label>
